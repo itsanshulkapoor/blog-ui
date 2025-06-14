@@ -1,28 +1,44 @@
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import projectsData from '@/data/projectsData'
-import { genPageMetadata } from 'app/seo'
+import Image from 'next/image'
 
-export const metadata = genPageMetadata({ title: 'Project Details' })
-
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export async function generateMetadata({ params }) {
   const project = projectsData.find((p) => p.href === `/projects/${params.slug}`)
-
   if (!project) {
-    return notFound()
+    return {
+      title: 'Project Not Found',
+    }
+  }
+  return {
+    title: project.title,
+    description: project.description,
+  }
+}
+
+export default function ProjectPage({ params }) {
+  const project = projectsData.find((p) => p.href === `/projects/${params.slug}`)
+  if (!project) {
+    notFound()
   }
 
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700">
-      <div className="space-y-2 pt-6 pb-8 md:space-y-5">
-        <h1 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14 dark:text-gray-100">
-          {project.title}
-        </h1>
-      </div>
-      <div className="container py-12">
-        {project.imgSrc && <div className="mb-8">Image goes here</div>}
-        <div className="prose dark:prose-dark max-w-none">
-          <p>{project.description}</p>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="mb-6 text-4xl font-bold">{project.title}</h1>
+      {project.imgSrc && (
+        <div className="mb-8">
+          <Image
+            src={project.imgSrc}
+            alt={project.title}
+            width={800}
+            height={450}
+            className="h-auto w-full rounded-lg shadow-lg"
+            priority
+          />
         </div>
+      )}
+      <div className="prose max-w-none">
+        <p className="text-lg text-gray-700">{project.description}</p>
       </div>
     </div>
   )
