@@ -1,6 +1,11 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.includePackageJsonAutoImports": "auto",
+  "typescript.suggest.autoImports": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.workspaceSymbols.scope": "allOpenProjects",
   // "editor.renderWhitespace": "all"
   "editor.guides.bracketPairs": false,
   "editor.guides.indentation": false,
@@ -8,5 +13,49 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.tabSize": 2,
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleReferences": "peek",
+  "editor.definitionLinkOpensInPeek": false,
+  "editor.hover.enabled": true,
+  "editor.hover.delay": 300,
+
+  // GitLens Configuration
+  "gitlens.codeLens.enabled": true,
+  "gitlens.codeLens.authors.enabled": true,
+  "gitlens.codeLens.recentChange.enabled": true,
+  "gitlens.currentLine.enabled": true,
+  "gitlens.currentLine.pullRequests.enabled": true,
+  "gitlens.hovers.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.blame.format": "${author}, ${agoOrDate}",
+  "gitlens.blame.heatmap.enabled": true,
+  "gitlens.statusBar.enabled": true,
+  "gitlens.views.repositories.files.layout": "tree",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+
+  // TypeScript Go to Definition Configuration
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.includeCompletionsForModuleExports": true,
+  "typescript.suggest.includeCompletionsWithSnippetText": true,
+  "typescript.preferences.quoteStyle": "double",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+
+  // Editor navigation settings
+  "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.goToReferences",
+  "editor.gotoLocation.alternativeTypeDefinitionCommand": "editor.action.goToReferences",
+  "editor.gotoLocation.alternativeImplementationCommand": "editor.action.goToReferences",
+
+  // Cmd+Click Configuration
+  "editor.multiCursorModifier": "alt",
+  "editor.links.enabled": true,
+  "editor.detectIndentation": true
 }
