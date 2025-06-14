@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Code With Kaps Blog',
+  title: 'Code With Kaps',
   author: 'Anshul Kapoor',
   headerTitle: 'Code With Kaps',
   description: 'A blog written for code with kaps',
