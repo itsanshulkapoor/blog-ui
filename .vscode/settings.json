@@ -16,8 +16,19 @@
   "editor.formatOnType": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
+    // ESLint fixes
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit"
+
+    // Import management
+    "source.organizeImports": "explicit",
+    "source.addMissingImports": "explicit",
+    "source.removeUnusedImports": "explicit",
+
+    // Prettier formatting (if needed)
+    "source.fixAll.prettier": "never", // Disabled since formatOnSave handles this
+
+    // CSS/SCSS fixes
+    "source.fixAll.stylelint": "explicit"
   },
 
   // File-specific formatters

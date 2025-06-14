@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Code With Kaps',
   author: 'Anshul Kapoor',
   headerTitle: 'Code With Kaps',
-  description: 'A blog written for code with kaps',
+  description: 'Where Code Meets Curiosity and Creativity',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
