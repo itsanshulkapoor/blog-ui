@@ -70,6 +70,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link
         rel="icon"
         type="image/png"
+        sizes="64x64"
+        href={`${basePath}/static/favicons/favicon_64_x_64_dark.png`}
+      />
+      <link
+        rel="icon"
+        type="image/png"
         sizes="48x48"
         href={`${basePath}/static/favicons/favicon_48_x_48_dark.png`}
       />
@@ -77,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href={`${basePath}/static/favicons/favicon_32_x_32.png`}
+        href={`${basePath}/static/favicons/favicon_32_x_32_dark.png`}
       />
       <link rel="manifest" href={`${basePath}/static/favicons/site.webmanifest`} />
       <meta name="msapplication-TileColor" content="#000000" />
